@@ -1,21 +1,47 @@
-import React from "react";
 
-interface KeyboardProps {
-  onGuess: (letter: string) => void;
-}
+const KEYS = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
 
-const Keyboard: React.FC<KeyboardProps> = ({ onGuess }) => {
-  const alphabet = "abcdefghijklmnopqrstuvwxyz";
-
+function Keyboard() {
   return (
-    <div className="keyboard">
-      {alphabet.split("").map((letter) => (
-        <button key={letter} onClick={() => onGuess(letter)}>
-          {letter}
-        </button>
-      ))}
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(75px, 1fr)",
+        gap: ".5rem",
+      }}
+    >
+      {KEYS.map(key => {
+        return <button className="" key={key}>{key}</button>;
+      })}
     </div>
   );
-};
+}
 
 export default Keyboard;
