@@ -55,8 +55,8 @@ export function App() {
 
       if (key !== "Enter") return;
 
-      e.preventDefault()
-      setGuessedLetters([])
+      e.preventDefault();
+      setGuessedLetters([]);
       setWordToGuess(getWord());
     };
     document.addEventListener("keypress", handler);
@@ -79,8 +79,8 @@ export function App() {
       }}
     >
       <div style={{ fontSize: "2rem", textAlign: "center" }}>
-        {isWinner && "Winer! - Refresh to try again"}
-        {isLoser && "Nice try - Refresh to try again"}
+        {isWinner && "Winer! - Press Enter to try again"}
+        {isLoser && "Nice try - Press Enter to try again"}
       </div>
       <Hangman numberOfGuesses={incorrectLetters.length} />
       <HangmanWord
