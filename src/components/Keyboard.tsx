@@ -1,5 +1,5 @@
-import style from "./Keyboard.modules.css";
-
+import style from "./Keyboard.module.css";
+console.log(style)
 const KEYS = [
   "a",
   "b",
